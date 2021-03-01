@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+$img_path: '../../img/';
+$first_color: rgb(224, 0, 0);
+
+body {
+    background: rgb(246, 246, 246);
+}
+
+header {
+
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+        height: 100%;
+        width: 140px;
+        background: url('#{$img_path}logo.png') center;
+        background-size: 100% auto;
+    }
+
+    .header__icons {
+        display: flex;
+
+        .header__phone {
+            height: 26px;
+            width: 26px;
+            margin: 17px 10px;
+            background: url('#{$img_path}phone.png') center;
+            background-size: 100% 100%;
+        }
+    
+        .header__burger {
+            height: 36px;
+            width: 36px;
+            margin: 12px 10px;
+            background: url('#{$img_path}burger.png') center;
+            background-size: 100% 100%;
+        }
+    }
+
+}
+
+.tarif {
+
+    .tarif__selectors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px 0;
+    
+        
+
+        .tarif__selectors--member {
+            font-size: 20px;
+            margin: 5px 10px;
+            color: rgb(110, 110, 110);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .checked-member {
+            color: $first_color;
+        }
+    }
+    
+    .tarif__list {
+
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+    
+        .tarif__list--card {
+    
+            width: 250px;
+            height: 450px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card__name {
+                font-size: 30px;
+                font-family: 'Exo 2', sans-serif;
+                color: rgb(92, 92, 92);
+                margin: 0 20px;
+            }
+
+            .card__info {
+
+                .card__info--characteristics {
+                    display: flex;
+                    justify-content: start;
+                    flex-wrap: wrap;
+
+                    .card__info--characteristics--p {
+                        
+                        font-size: 23px;
+                        font-family: 'Exo 2', sans-serif;
+                        margin: 2px 10px 0 0;
+                        color: rgb(92, 92, 92);
+
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            .card__tags {
+                .card__tags--member {
+                    display: inline-block;
+                    padding: 1px 5px;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    background: rgb(235, 235, 235);
+                }
+            }
+            .card__price {
+                font-family: 'Exo 2', sans-serif;
+                font-size: 23px;
+                color: rgb(92, 92, 92);
+                span {
+                    font-size: 15px;
+                }
+            }
+            .card__button {
+                width: 80%;
+                margin: 0 auto;
+                border-radius: 5px;
+                padding: 5px;
+                background: $first_color;
+                color: white;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
