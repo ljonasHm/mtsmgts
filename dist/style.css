@@ -83,7 +83,6 @@ header .header__icons .header__burger {
   font-size: 25px;
   font-family: "Exo 2", sans-serif;
   color: #5c5c5c;
-  margin: 0 20px;
 }
 .tarif .tarif__list .tarif__list--card .card__info .card__info--characteristics {
   display: flex;
@@ -126,6 +125,9 @@ header .header__icons .header__burger {
   font-family: "Exo 2", sans-serif;
   font-size: 20px;
   text-align: center;
+}
+.tarif .tarif__list .hide {
+  display: none;
 }
 
 .tech-info {
