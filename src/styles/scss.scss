@@ -59,6 +59,19 @@ header {
             margin: 5px 10px;
             color: rgb(110, 110, 110);
             font-family: 'Exo 2', sans-serif;
+            .tarif__selectors--member--after {
+                background-color: $first_color;
+                display: block;
+                content: "";
+                height: 3px;
+                width: 0%;
+                -webkit-transition: width .3s ease-in-out;
+                -moz--transition: width .3s ease-in-out;
+                transition: width .3s ease-in-out;
+            }
+            .checked--after {
+                width: 100%;
+            }
         }
 
         .checked-member {
@@ -79,7 +92,7 @@ header {
             height: 450px;
             background: white;
             border-radius: 10px;
-            padding: 40px 15px 20px 15px;
+            padding: 45px 15px 20px 15px;
             margin: 10px 10px;
             display: flex;
             flex-direction: column;
@@ -96,6 +109,32 @@ header {
                 color: red;
                 border: 1px solid red;
                 border-radius: 11px;
+            }
+
+            .card__icon-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+
+                .card__icon-list--member{
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+                }
+
+                .card__icon-list--internet {
+                    background: url('#{$img_path}interneticon.png') center;
+                    background-size: auto 100%;
+                }
+                .card__icon-list--tv {
+                    background: url('#{$img_path}tvicon.png') center;
+                    background-size: auto 100%;
+                }
+                .card__icon-list--mobile {
+                    background: url('#{$img_path}mobileicon2.png') center;
+                    width: 35px;
+                    background-size: auto 100%;
+                }
             }
 
             .card__name {
@@ -138,7 +177,7 @@ header {
             }
             .card__price {
                 font-family: 'Exo 2', sans-serif;
-                font-size: 23px;
+                font-size: 35px;
                 color: $font_color;
                 span {
                     font-size: 15px;
@@ -154,6 +193,7 @@ header {
                 font-family: 'Exo 2', sans-serif;
                 font-size: 20px;
                 text-align: center;
+                cursor: pointer;
             }
         }
 
@@ -168,31 +208,45 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     
-    .tech-info__internet {
-        width: 400px;
-        height: 200px;
-        padding: 50px 10px;
-        background: url('#{$img_path}internetwrapper.jpg') center;
-        background-size: 135% auto;
+    .tech-info__div {
+        width: 350px;
+        height: 220px;
+        padding: 20px 20px 20px 20px;
         border-radius: 10px;
-        font-size: 23px;
-        font-family: 'Exo 2', sans-serif;
-        text-align: center;
-        color: white;
         margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 15px;
+            text-align: center;
+            color: white;
+        }
     }
-    .tech-info__tv {
-        width: 400px;
-        height: 200px;
-        padding: 50px 10px;
-        background: url('#{$img_path}tvwrapper.jpg') center;
-        background-size: 135% auto;
-        border-radius: 10px;
-        font-size: 23px;
-        font-family: 'Exo 2', sans-serif;
-        text-align: center;
-        color: white;
-        margin: 10px;
+
+    .tech-info__internet {
+        background: url('#{$img_path}internetwrapper.jpg');
+        background-position: center;
+        background-size: 126% auto;
+    }
+    .tech-info__balance {
+        background: url('#{$img_path}balancewrapper.jpg');
+        background-position: center;
+        background-size: 127% auto;
+    }
+    .tech-info__economy {
+        background: url('#{$img_path}economywrapper.jpg');
+        background-position: center;
+        background-size: 105% auto;
     }
 }
 
@@ -206,47 +260,71 @@ header {
         text-align: center;
         color: rgb(236, 236, 236);
         margin-bottom: 30px;
-    }
+    }    
+}
 
-    form {
+form {
+    width: 250px;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    .form__str {
+
         width: 230px;
-        height: 210px;
-        background: white;
-        border-radius: 10px;
-        margin: auto;
         display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
+        justify-content: space-between;
 
         .form__input {
-            width: 200px;
+            width: 75px;
             height: 30px;
             border: none;
             border-bottom: 1px solid rgb(182, 182, 182);
             color: rgb(182, 182, 182);
             margin-top: 20px;
         }
-
-        .form__button {
-            margin-top: 40px;
-            width: 150px;
-            border-radius: 5px;
-            padding: 5px;
-            background: $first_color;
-            color: white;
-            font-family: 'Exo 2', sans-serif;
-            font-size: 20px;
-            text-align: center;
-        }
     }
 
-    @media (min-width: 750px) {
+    .form__input {
+        width: 230px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid rgb(182, 182, 182);
+        color: rgb(182, 182, 182);
+        margin-top: 20px;
+    }
 
-        form {
-            width: 500px;
+    .form__button {
+        margin-top: 40px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 5px;
+        background: $first_color;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 750px) {
+
+    form {
+        width: 500px;
+        .form__input {
+            width: 450px;
+        }
+        .form__str {
+            width: 450px;
+
             .form__input {
-                width: 450px;
+                width: 140px;
             }
         }
     }
@@ -264,6 +342,22 @@ footer {
 
 .wrapper {
     margin-top: 20px;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    #modal__window {
+        position: relative;
+    }
+}
+
+.hide {
+    display: none;
 }
 
 @media (min-width: 1200px) {

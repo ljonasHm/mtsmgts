@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/style.css?v=1.000">
+    <link rel="stylesheet" href="dist/style.css?v=1.002">
     <title>МГТС</title>
-    <script src="dist/bundle.js?v=1.000" defer></script>
+    <script src="dist/bundle.js?v=1.002" defer></script>
 </head>
 <body>
     <header>
@@ -20,14 +20,26 @@
     <div class="wrapper">
         <div class="tarif">
             <div class="tarif__selectors">
-                <div class="tarif__selectors--member checked-member" data-category="hits">Хиты</div>
-                <div class="tarif__selectors--member" data-category="internet">Интернет</div>
-                <div class="tarif__selectors--member" data-category="tv">Интернет + ТВ</div>
-                <div class="tarif__selectors--member" data-category="mobile">Мобильная связь</div>
+                <div class="tarif__selectors--member checked-member" data-category="hits">Хиты
+                    <div class="tarif__selectors--member--after checked--after"></div>
+                </div>
+                <div class="tarif__selectors--member" data-category="internet">Интернет
+                    <div class="tarif__selectors--member--after"></div>
+                </div>
+                <div class="tarif__selectors--member" data-category="tv">Интернет + ТВ
+                    <div class="tarif__selectors--member--after"></div>
+                </div>
+                <div class="tarif__selectors--member" data-category="mobile">Мобильная связь
+                    <div class="tarif__selectors--member--after"></div>
+                </div>
             </div>
             <div class="tarif__list">
                 <div class="tarif__list--card" data-category="hitstv">
                     <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                    </div>
                     <p class="card__name">Интернет + ТВ</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -43,6 +55,11 @@
                 </div>
                 <div class="tarif__list--card" data-category="hitsmobile">
                     <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                        <div class="card__icon-list--member card__icon-list--mobile"></div>
+                    </div>
                     <p class="card__name">Весь МТС Супер</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -61,8 +78,37 @@
                     <p class="card__price">495 <span>руб/месяц</span></p>
                     <div class="card__button">Подключить</div>
                 </div>
+                <div class="tarif__list--card hide" data-category="mobile">
+                    <div class="card__stock-mark">Скидка 34%</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                        <div class="card__icon-list--member card__icon-list--mobile"></div>
+                    </div>
+                    <p class="card__name">Интернет + Мобильная связь + ТВ</p>
+                    <div class="card__info">
+                        <div class="card__info--characteristics">
+                            <p class="card__info--characteristics--p">300 <span>мбит/c</span></p>
+                            <p class="card__info--characteristics--p">1000 <span>мин</span></p>
+                            <p class="card__info--characteristics--p">∞ <span>гб трафика</span></p>
+                            <p class="card__info--characteristics--p">100 <span>sms</span></p>
+                            <p class="card__info--characteristics--p">170 <span>каналов</span></p>
+                        </div>
+                    </div>
+                    <div class="card__tags">
+                        <div class="card__tags--member">Бесплатный Wi-Fi роутер</div>
+                        <div class="card__tags--member">Действует по всей России</div>
+                    </div>
+                    <p class="card__price">990 <span>руб/месяц</span></p>
+                    <div class="card__button">Подключить</div>
+                </div>
                 <div class="tarif__list--card" data-category="hitsmobile">
                     <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                        <div class="card__icon-list--member card__icon-list--mobile"></div>
+                    </div>
                     <p class="card__name">Мы МТС +</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -82,6 +128,9 @@
                 </div>
                 <div class="tarif__list--card hide" data-category="internet">
                     <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                    </div>
                     <p class="card__name">Интернет</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -95,6 +144,9 @@
                     <div class="card__button">Подключить</div>
                 </div>
                 <div class="tarif__list--card hide" data-category="internet">
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                    </div>
                     <p class="card__name">Интернет - 500</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -108,7 +160,9 @@
                     <div class="card__button">Подключить</div>
                 </div>
                 <div class="tarif__list--card hide" data-category="internet">
-                    <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                    </div>
                     <p class="card__name">Интернет - 1Гб</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -121,27 +175,11 @@
                     <p class="card__price">999 <span>руб/месяц</span></p>
                     <div class="card__button">Подключить</div>
                 </div>
-                <div class="tarif__list--card hide" data-category="mobile">
-                    <div class="card__stock-mark">Скидка 34%</div>
-                    <p class="card__name">Интернет + Мобильная связь + ТВ</p>
-                    <div class="card__info">
-                        <div class="card__info--characteristics">
-                            <p class="card__info--characteristics--p">300 <span>мбит/c</span></p>
-                            <p class="card__info--characteristics--p">1000 <span>мин</span></p>
-                            <p class="card__info--characteristics--p">∞ <span>гб трафика</span></p>
-                            <p class="card__info--characteristics--p">100 <span>sms</span></p>
-                            <p class="card__info--characteristics--p">170 <span>каналов</span></p>
-                        </div>
-                    </div>
-                    <div class="card__tags">
-                        <div class="card__tags--member">Бесплатный Wi-Fi роутер</div>
-                        <div class="card__tags--member">Действует по всей России</div>
-                    </div>
-                    <p class="card__price">990 <span>руб/месяц</span></p>
-                    <div class="card__button">Подключить</div>
-                </div>
                 <div class="tarif__list--card hide" data-category="tv">
-                    <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                    </div>
                     <p class="card__name">Интернет + ТВ</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -156,7 +194,10 @@
                     <div class="card__button">Подключить</div>
                 </div>
                 <div class="tarif__list--card hide" data-category="tv">
-                    <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                    </div>
                     <p class="card__name">Интернет + ТВ</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -171,7 +212,10 @@
                     <div class="card__button">Подключить</div>
                 </div>
                 <div class="tarif__list--card hide" data-category="tv">
-                    <div class="card__stock-mark">Акция</div>
+                    <div class="card__icon-list">
+                        <div class="card__icon-list--member card__icon-list--internet"></div>
+                        <div class="card__icon-list--member card__icon-list--tv"></div>
+                    </div>
                     <p class="card__name">Интернет + ТВ</p>
                     <div class="card__info">
                         <div class="card__info--characteristics">
@@ -190,8 +234,18 @@
     </div>
     <div class="wrapper">
         <div class="tech-info">
-            <div class="tech-info__internet">Здесь какой-то текст про интернет</div>
-            <div class="tech-info__tv">Здесь какой-то текст про тв</div>
+            <div class="tech-info__div tech-info__internet">
+                <h1>Бесплатный скоростной Wi-Fi роутер</h1>
+                <p>Не знаете, как выбрать подходящий оптический модем? Зато знаем мы. Предоставим роутер бесплатно!</p>
+            </div>
+            <div class="tech-info__div tech-info__balance">
+                <h1>Доступ даже при отрицательном балансе</h1>
+                <p>Пользуйтесь домашним интернетом сейчас - платите потом! Оплачивайте услуги за прошлый месяц до 20 числа текущего.</p>
+            </div>
+            <div class="tech-info__div tech-info__economy">
+                <h1>До 40% экономии на услугах связи</h1>
+                <p>Оптом - всегда выгоднее. Вот и цифровое ТВ в комплекте с домашним интернетом и мобильной связью обойдется дешевле. Для подключения оставьте заявку на нашем сайте</p>
+            </div>
         </div>
     </div>
     <div class="wrapper">
@@ -200,6 +254,12 @@
             <form>
                 <input class="form__input" type="text" placeholder="Имя">
                 <input class="form__input" type="text" placeholder="Телефон">
+                <input class="form__input" type="text" placeholder="Улица">
+                <div class="form__str">
+                    <input class="form__input" type="text" placeholder="Дом">
+                    <input class="form__input" type="text" placeholder="Корпус">
+                    <input class="form__input" type="text" placeholder="Подъезд">
+                </div>
                 <div class="form__button">Отправить</div>
             </form>
         </div>
@@ -210,5 +270,18 @@
             <p>+7 (999) 999-99-99</p>
         </div>
     </footer>
+    <div class="modal hide">
+        <form id="modal__window">
+            <input class="form__input" type="text" placeholder="Имя">
+                <input class="form__input" type="text" placeholder="Телефон">
+                <input class="form__input" type="text" placeholder="Улица">
+                <div class="form__str">
+                    <input class="form__input" type="text" placeholder="Дом">
+                    <input class="form__input" type="text" placeholder="Корпус">
+                    <input class="form__input" type="text" placeholder="Подъезд">
+                </div>
+                <div class="form__button">Отправить</div>
+        </form>
+    </div>
 </body>
 </html>
