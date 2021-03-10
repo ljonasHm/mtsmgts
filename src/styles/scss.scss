@@ -34,12 +34,21 @@ header {
             background-size: 100% 100%;
         }
     
-        .header__burger {
-            height: 36px;
-            width: 36px;
-            margin: 12px 10px;
-            background: url('#{$img_path}burger.png') center;
-            background-size: 100% 100%;
+        .card__button {
+            margin: auto;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background: $first_color;
+            color: white;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 17px;
+            text-align: center;
+            cursor: pointer;
+        }
+        @media (max-width: 750px) {
+            .card__button {
+                display: none;
+            }
         }
     }
 
@@ -53,12 +62,15 @@ header {
         justify-content: space-around;
         cursor: pointer;
         
+        
 
         .tarif__selectors--member {
             font-size: 20px;
             margin: 5px 10px;
             color: rgb(110, 110, 110);
             font-family: 'Exo 2', sans-serif;
+            text-decoration: none;
+
             .tarif__selectors--member--after {
                 background-color: $first_color;
                 display: block;
@@ -89,7 +101,7 @@ header {
         .tarif__list--card {
     
             width: 250px;
-            height: 450px;
+            height: 500px;
             background: white;
             border-radius: 10px;
             padding: 45px 15px 20px 15px;
@@ -173,6 +185,11 @@ header {
                     font-size: 15px;
                     border-radius: 10px;
                     background: rgb(235, 235, 235);
+                }
+
+                .channels-tag {
+                    color:$first_color;
+                    cursor: pointer;
                 }
             }
             .card__price {
