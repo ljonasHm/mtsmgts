@@ -14,8 +14,6 @@ function changeTarifList(selector) {
     const tarifSelectors = document.querySelectorAll('.tarif__selectors--member');
     const tarifCards = document.querySelectorAll('.tarif__list--card');
 
-    console.log('change');
-
     tarifSelectors.forEach(elem => {
         if (elem.classList.contains('checked-member')) {
             elem.classList.remove('checked-member');
@@ -46,10 +44,10 @@ function tarifList() {
     });
 }
 
-function modal() {
-    const btns = document.querySelectorAll('.card__button');
-    const modal = document.querySelector('.modal');
-    const modalWindow = document.querySelector('#modal__window');
+function modal(btnSelector, modalSelector, windowSelector) {
+    const btns = document.querySelectorAll(btnSelector);
+    const modal = document.querySelector(modalSelector);
+    const modalWindow = document.querySelector(windowSelector);
 
     btns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -70,6 +68,55 @@ function modal() {
     }
 }
 
+function showChannels(category, basic) {
+    const channels = document.querySelectorAll('.channels__list--member');
+    
+    channels.forEach(channel => {
+        if (!channel.classList.contains('hide')) {
+            channel.classList.add('hide');
+        }
+        if (basic) {
+            if (channel.dataset.category === category) {
+                channel.classList.remove('hide');
+            }
+        } else {
+            if (channel.dataset.category === category && channel.dataset.pack != 'basic') {
+                channel.classList.remove('hide');
+            } 
+        }
+    })
+}
+
+function channelsList () {
+    const select = document.querySelector('.channels__select');
+    const packButton = document.querySelectorAll('.channels__packs--member');
+    let basic = false;
+
+    select.addEventListener('change', () => {
+        showChannels(select.value, basic);
+    });
+
+    packButton.forEach(pack => {
+        pack.addEventListener('click', () => {
+            packButton.forEach(elem => {
+                elem.classList.remove('checked-member');
+                elem.firstElementChild.classList.remove('checked--after');
+            });
+            pack.classList.add('checked-member');
+            pack.firstElementChild.classList.add('checked--after');
+            if (pack.dataset.pack === 'basic') {
+                basic = true;
+                showChannels(select.value, basic);
+            } else {
+                basic = false;
+                showChannels(select.value, basic);
+            }
+        });
+    });
+}
+
 tarifList();
-modal();
+modal('.card__button', '#form', '#modal__window');
+modal('.channels-tag', '#channels', '#modal__channels');
 tarifHashLoading();
+channelsList();

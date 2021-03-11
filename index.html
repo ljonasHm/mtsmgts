@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/style.css?v=1.005">
+    <link rel="stylesheet" href="dist/style.css?v=1.006">
     <title>МГТС</title>
-    <script src="dist/bundle.js?v=1.005" defer></script>
+    <script src="dist/bundle.js?v=1.006" defer></script>
 </head>
 <body>
     <header>
@@ -277,7 +277,7 @@
             <p>+7 (999) 999-99-99</p>
         </div>
     </footer>
-    <div class="modal hide">
+    <div class="modal hide" id="form">
         <form id="modal__window">
             <input class="form__input" type="text" placeholder="Имя">
                 <input class="form__input" type="text" placeholder="Телефон">
@@ -289,6 +289,209 @@
                 </div>
                 <div class="form__button">Отправить</div>
         </form>
+    </div>
+    <div class="modal hide" id="channels">
+        <div id="modal__channels">
+            <h1>Список каналов</h1>
+            <div class="channels__packs">
+                <div class="channels__packs--member checked-member">Пакет "Оптимальный" 91 канал
+                    <div class="channels__selectors--member--after checked--after"></div>
+                </div>
+                <div class="channels__packs--member" data-pack="basic">Пакет "Базовый" 171 канал
+                    <div class="channels__selectors--member--after"></div>
+                </div>
+            </div>
+            <div class="channels__categories">
+                <select class="channels__select">
+                    <option value="federal">Федеральные</option>
+                    <option value="news">Новостные</option>
+                    <option value="informative">Познавательные</option>
+                    <option value="movie">Кино и сериалы</option>
+                    <option value="child">Детские</option>
+                    <option value="sport">Спортивные</option>
+                    <option value="documentary">Документальные</option>
+                    <option value="music">Музыкальные</option>
+                    <option value="regional">Региональные</option>
+                    <option value="hobby">Хобби и досуг</option>
+                    <option value="shop">Магазин на диване</option>
+                    <option value="adult">Для взрослых</option>
+                </select>
+            </div>
+            <div class="channels__list">
+                <div class="channels__list--member" data-category='federal'>Первый канал</div>
+                <div class="channels__list--member" data-category='federal'>Россия 1</div>
+                <div class="channels__list--member" data-category='federal'>Матч ТВ</div>
+                <div class="channels__list--member" data-category='federal'>НТВ</div>
+                <div class="channels__list--member" data-category='federal'>Пятый канал</div>
+                <div class="channels__list--member" data-category='federal'>Культура</div>
+                <div class="channels__list--member" data-category='federal'>Россия 24</div>
+                <div class="channels__list--member" data-category='federal'>Карусель</div>
+                <div class="channels__list--member" data-category='federal'>ОТР</div>
+                <div class="channels__list--member" data-category='federal'>ТВ Центр</div>
+                <div class="channels__list--member" data-category='federal'>РЕН ТВ</div>
+                <div class="channels__list--member" data-category='federal'>Спас</div>
+                <div class="channels__list--member" data-category='federal'>СТС</div>
+                <div class="channels__list--member" data-category='federal'>Домашний</div>
+                <div class="channels__list--member" data-category='federal'>ТВ-3</div>
+                <div class="channels__list--member" data-category='federal'>Пятница!</div>
+                <div class="channels__list--member" data-category='federal'>Звезда</div>
+                <div class="channels__list--member" data-category='federal'>Мир</div>
+                <div class="channels__list--member" data-category='federal'>ТНТ</div>
+                <div class="channels__list--member" data-category='federal'>МУЗ-ТВ</div>
+                <div class="channels__list--member" data-category='federal'>Первый HD</div>
+                <div class="channels__list--member" data-category='federal'>Россия 1 HD</div>
+                <div class="channels__list--member" data-category='federal'>НТВ HD</div>
+                <div class="channels__list--member hide" data-category='news'>МТС-Инфо</div>
+                <div class="channels__list--member hide" data-category='news'>РБК ТВ</div>
+                <div class="channels__list--member hide" data-category='news'>Мир 24</div>
+                <div class="channels__list--member hide" data-category='news'>Известия HD</div>
+                <div class="channels__list--member hide" data-category='news'>Евроновости</div>
+                <div class="channels__list--member hide" data-category='news'>ВМЕСТЕ-РФ</div>
+                <div class="channels__list--member hide" data-category='news' data-pack="basic">ЛДПР.ТВ</div>
+                <div class="channels__list--member hide" data-category='news' data-pack="basic">RT HD</div>
+                <div class="channels__list--member hide" data-category='news' data-pack="basic">DW Deutsch</div>
+                <div class="channels__list--member hide" data-category='news' data-pack="basic">France 24</div>
+                <div class="channels__list--member hide" data-category='informative'>Viasat Explore</div>
+                <div class="channels__list--member hide" data-category='informative'>Viasat History</div>
+                <div class="channels__list--member hide" data-category='informative'>Viasat Nature</div>
+                <div class="channels__list--member hide" data-category='informative'>Моя Планета</div>
+                <div class="channels__list--member hide" data-category='informative'>Discovery Channel HD</div>
+                <div class="channels__list--member hide" data-category='informative'>Доктор</div>
+                <div class="channels__list--member hide" data-category='informative'>Здоровье ТВ</div>
+                <div class="channels__list--member hide" data-category='informative'>Кто есть кто</div>
+                <div class="channels__list--member hide" data-category='informative'>Еда Премиум HD</div>
+                <div class="channels__list--member hide" data-category='informative'>Еда</div>
+                <div class="channels__list--member hide" data-category='informative'>Еда</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>Московский образовательный HD</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>National Geographic</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>HISTORY2 HD</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>English Club TV</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>365 дней ТВ</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>Телекафе</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>HDL HD</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>Travel+Adventure HD</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>Ностальгия</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>History HD</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>CCTV-4</div>
+                <div class="channels__list--member hide" data-category='informative' data-pack='basic'>CGTN Russian</div>
+                <div class="channels__list--member hide" data-category='movie'>Ю</div>
+                <div class="channels__list--member hide" data-category='movie'>Супер</div>
+                <div class="channels__list--member hide" data-category='movie'>СТС love</div>
+                <div class="channels__list--member hide" data-category='movie'>KinoJam 1</div>
+                <div class="channels__list--member hide" data-category='movie'>KinoJam 2</div>
+                <div class="channels__list--member hide" data-category='movie'>Дом Кино</div>
+                <div class="channels__list--member hide" data-category='movie'>TV1000</div>
+                <div class="channels__list--member hide" data-category='movie'>TV1000 Русское кино</div>
+                <div class="channels__list--member hide" data-category='movie'>TV1000 Action</div>
+                <div class="channels__list--member hide" data-category='movie'>Кино ТВ</div>
+                <div class="channels__list--member hide" data-category='movie'>Sony Channel</div>
+                <div class="channels__list--member hide" data-category='movie'>Sony Sci-Fi</div>
+                <div class="channels__list--member hide" data-category='movie'>Paramount Comedy</div>
+                <div class="channels__list--member hide" data-category='movie'>Spike HD</div>
+                <div class="channels__list--member hide" data-category='movie'>Иллюзион +</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">San Porto</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Дом Кино Премиум HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Победа HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">НСТ</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Cinema</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">НТВ Сериал</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Кинокомедия</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Киномикс</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Киносерия</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Киносвидание HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Мужское кино HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Наше новое кино</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Родное кино</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Индийское кино</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Zee TV</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">FOX HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Hollywood HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Paramount channel HD</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Дорама</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">Русский Иллюзион</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">КиноСат</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">FlixSnip</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">НТВ Право</div>
+                <div class="channels__list--member hide" data-category='movie' data-pack="basic">НТВ-ХИТ</div>
+                <div class="channels__list--member hide" data-category='child'>Канал Disney</div>
+                <div class="channels__list--member hide" data-category='child'>Радость моя</div>
+                <div class="channels__list--member hide" data-category='child'>Cartoon Network</div>
+                <div class="channels__list--member hide" data-category='child'>Nickelodeon</div>
+                <div class="channels__list--member hide" data-category='child'>Nick Jr.</div>
+                <div class="channels__list--member hide" data-category='child'>Nicktoons</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">О!</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">Мульт</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">Детский мир</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">Мультиландия</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">TiJi</div>
+                <div class="channels__list--member hide" data-category='child' data-pack="basic">Gulli Girl</div>
+                <div class="channels__list--member hide" data-category='sport'>Матч ТВ HD</div>
+                <div class="channels__list--member hide" data-category='sport'>Eurosport 1 HD</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Живи!</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Матч! Арена HD</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Матч! Игра HD</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Матч! Страна</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Russion Extreme</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Матч! Боец</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Бокс ТВ</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">М1 Global</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">КХЛ</div>
+                <div class="channels__list--member hide" data-category='sport' data-pack="basic">Старт HD</div>
+                <div class="channels__list--member hide" data-category='documentary'>Совершенно секретно</div>
+                <div class="channels__list--member hide" data-category='documentary'>RТД HD</div>
+                <div class="channels__list--member hide" data-category='documentary'>Ретро</div>
+                <div class="channels__list--member hide" data-category='music'>MTV Россия</div>
+                <div class="channels__list--member hide" data-category='music'>RU.TV</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV Руссикий Хит</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV Hist</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV Classic</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV Deluxe HD</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Bridge TV Шлягер</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Europa Plus TV HD</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Музыка Первого</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Страна FM</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Ля-Минор</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Шансон</div>
+                <div class="channels__list--member hide" data-category='music' data-pack="basic">Mezzo Live HD</div>
+                <div class="channels__list--member hide" data-category='regional'>Москва 24</div>
+                <div class="channels__list--member hide" data-category='regional'>Телеканал 360° HD</div>
+                <div class="channels__list--member hide" data-category='regional'>Москва Доверие</div>
+                <div class="channels__list--member hide" data-category='regional'>Беларусь 24</div>
+                <div class="channels__list--member hide" data-category='regional' data-pack='basic'>Союз</div>
+                <div class="channels__list--member hide" data-category='regional' data-pack='basic'>БелРос (ТРО)</div>
+                <div class="channels__list--member hide" data-category='hobby'>Телеканал 360°</div>
+                <div class="channels__list--member hide" data-category='hobby'>2x2</div>
+                <div class="channels__list--member hide" data-category='hobby'>Че</div>
+                <div class="channels__list--member hide" data-category='hobby'>ТНТ 4</div>
+                <div class="channels__list--member hide" data-category='hobby'>8 канал</div>
+                <div class="channels__list--member hide" data-category='hobby'>Paramount Comedy HD</div>
+                <div class="channels__list--member hide" data-category='hobby'>Сарафан</div>
+                <div class="channels__list--member hide" data-category='hobby'>TLC HD</div>
+                <div class="channels__list--member hide" data-category='hobby'>Бобёр</div>
+                <div class="channels__list--member hide" data-category='hobby'>HGTV HD</div>
+                <div class="channels__list--member hide" data-category='hobby'>Усадьба</div>
+                <div class="channels__list--member hide" data-category='hobby'>Драйв</div>
+                <div class="channels__list--member hide" data-category='hobby'>Охота и рыбалка</div>
+                <div class="channels__list--member hide" data-category='hobby'>Первый вегетарианский</div>
+                <div class="channels__list--member hide" data-category='hobby'>Время: далекое и близкое</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">НТВ Стиль</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">КВН ТВ</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Поехали! HD</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Авто Плюс HD</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Дикая охота HD</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Дикая Рыбалка HD</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Мужской</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Загородная жизнь</div>
+                <div class="channels__list--member hide" data-category='hobby' data-pack="basic">Театр</div>
+                <div class="channels__list--member hide" data-category='shop'>Shopping live</div>
+                <div class="channels__list--member hide" data-category='shop'>Leamax24</div>
+                <div class="channels__list--member hide" data-category='shop'>Shop&Show</div>
+                <div class="channels__list--member hide" data-category='shop'>Ювелирочка</div>
+                <div class="channels__list--member hide" data-category='shop'>Leomax+</div>
+                <div class="channels__list--member hide" data-category='adult' data-pack='basic'>Шалун HD</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

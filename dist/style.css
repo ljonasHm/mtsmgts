@@ -319,6 +319,114 @@ footer p {
 .modal #modal__window {
   position: relative;
 }
+.modal #modal__channels {
+  position: relative;
+  width: 92%;
+  max-width: 1000px;
+  padding: 15px 10px 30px 10px;
+  background: white;
+  border-radius: 10px;
+  margin: auto;
+}
+.modal #modal__channels h1 {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 28px;
+}
+.modal #modal__channels .channels__packs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.modal #modal__channels .channels__packs .channels__packs--member {
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+.modal #modal__channels .channels__packs .channels__packs--member .channels__selectors--member--after {
+  background-color: #e00000;
+  display: block;
+  content: "";
+  height: 3px;
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.modal #modal__channels .channels__packs .channels__packs--member .checked--after {
+  width: 100%;
+}
+.modal #modal__channels .channels__packs .checked-member {
+  color: #e00000;
+}
+@media (min-width: 400px) {
+  .modal #modal__channels .channels__packs .channels__packs--member {
+    margin: 5px 10px 0 10px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 600px) {
+  .modal #modal__channels .channels__packs .channels__packs--member {
+    font-size: 20px;
+  }
+}
+.modal #modal__channels .channels__categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal #modal__channels .channels__categories .channels__categories--member {
+  font-family: "Exo 2", sans-serif;
+  color: #e00000;
+  border: 1px solid #e00000;
+  border-radius: 15px;
+}
+.modal #modal__channels .channels__categories select {
+  margin: auto;
+  margin-top: 10px;
+  border: none;
+  font-family: "Exo 2", sans-serif;
+  font-size: 15px;
+  color: #008cff;
+}
+@media (min-width: 500px) {
+  .modal #modal__channels .channels__categories select {
+    font-size: 17px;
+  }
+}
+.modal #modal__channels .channels__list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal #modal__channels .channels__list .channels__list--member {
+  height: 50px;
+  margin-top: 10px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 14px;
+  width: 50%;
+  text-align: center;
+}
+@media (min-width: 400px) {
+  .modal #modal__channels .channels__list .channels__list--member {
+    font-size: 15px;
+  }
+}
+@media (min-width: 400px) {
+  .modal #modal__channels .channels__list .channels__list--member {
+    width: 33.3%;
+  }
+}
+@media (min-width: 800px) {
+  .modal #modal__channels .channels__list .channels__list--member {
+    width: 25%;
+  }
+}
+@media (min-width: 1000px) {
+  .modal #modal__channels .channels__list .channels__list--member {
+    width: 20%;
+  }
+}
 
 .hide {
   display: none;
