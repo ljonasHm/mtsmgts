@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/style.css?v=1.006">
+    <link rel="stylesheet" href="dist/style.css?v=1.016">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>МГТС</title>
-    <script src="dist/bundle.js?v=1.006" defer></script>
+    <script src="dist/bundle.js?v=1.016" defer></script>
 </head>
 <body>
     <header>
         <div class="header__logo"></div>
         <div class="header__icons">
-            <div class="header__phone"><a href="tel:+79997833467"></a></div>
-            <div class="card__button">Подключить</div>
+            <a class="header__phone" href="tel:+78003508634"></a>
+            <a class="header__phone-text" href="tel:+78003508634">8 800 350-86-34</a>
+            <div class="header__button">Подключить</div>
         </div>
     </header>
     <div class="wrapper">
@@ -259,35 +262,36 @@
         <div class="form-wrapper">
             <h1>Оставьте заявку на подключение в Москве</h1>
             <form>
-                <input class="form__input" type="text" placeholder="Имя">
-                <input class="form__input" type="text" placeholder="Телефон">
-                <input class="form__input" type="text" placeholder="Улица">
+                <input name="name" class="form__input" type="text" placeholder="Имя">
+                <input name="telephone" class="form__input" type="text" placeholder="Телефон">
+                <input name="street" class="form__input" type="text" placeholder="Улица">
                 <div class="form__str">
-                    <input class="form__input" type="text" placeholder="Дом">
-                    <input class="form__input" type="text" placeholder="Корпус">
-                    <input class="form__input" type="text" placeholder="Подъезд">
+                    <input name="house" class="form__input" type="text" placeholder="Дом">
+                    <input name="housing" class="form__input" type="text" placeholder="Корпус">
                 </div>
-                <div class="form__button">Отправить</div>
+                <button class="form__button">Отправить</button>
+                <p class="message hide"></p>
             </form>
         </div>
     </div>
     <footer>
         <div class="wrapper">
             <p>г. Москва</p>
-            <p>+7 (999) 999-99-99</p>
+            <a class="footer__phone" href="tel:+78003508634">8 800 350-86-34</a>
         </div>
     </footer>
+    <a class='call' href="tel:+78003508634"></a>
     <div class="modal hide" id="form">
         <form id="modal__window">
-            <input class="form__input" type="text" placeholder="Имя">
-                <input class="form__input" type="text" placeholder="Телефон">
-                <input class="form__input" type="text" placeholder="Улица">
+            <input name="name" class="form__input" type="text" placeholder="Имя" >
+            <input name="telephone" class="form__input" type="text" placeholder="Телефон">
+            <input name="street" class="form__input" type="text" placeholder="Улица">
                 <div class="form__str">
-                    <input class="form__input" type="text" placeholder="Дом">
-                    <input class="form__input" type="text" placeholder="Корпус">
-                    <input class="form__input" type="text" placeholder="Подъезд">
+                    <input name="house" class="form__input" type="text" placeholder="Дом">
+                    <input name="housing" class="form__input" type="text" placeholder="Корпус">
                 </div>
-                <div class="form__button">Отправить</div>
+                <button class="form__button">Отправить</button>
+                <p class="message hide"></p>
         </form>
     </div>
     <div class="modal hide" id="channels">
@@ -493,5 +497,13 @@
             </div>
         </div>
     </div>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i,cid){w[l]=w[l]||[];w.pclick_client_id=cid;w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P23G9N', '85129');
+    </script>
+    <!-- End Google Tag Manager -->
 </body>
 </html>

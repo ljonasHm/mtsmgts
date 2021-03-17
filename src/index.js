@@ -115,8 +115,52 @@ function channelsList () {
     });
 }
 
+function form() {
+    const formButtons = document.querySelectorAll('.form__button');
+    formButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const dataForSend = Object.fromEntries((new FormData(button.parentElement)).entries());
+            if (dataForSend.name != '' && dataForSend.telephone != '') {
+                $.ajax({
+                    url: "send.php",
+                    type: "POST",
+                    data: ({
+                        name: dataForSend.name,
+                        tel: dataForSend.telephone,
+                        street: dataForSend.street,
+                        house: dataForSend.house,
+                        housing: dataForSend.housing
+                    }),
+                    dataType: "html",
+                    success: function() {
+                        button.parentElement.reset();
+                        button.parentElement.lastElementChild.classList.remove('hide');
+                        button.parentElement.lastElementChild.classList.remove('failure');
+                        button.parentElement.lastElementChild.classList.add('success');
+                        button.parentElement.lastElementChild.innerHTML = 'Заявка успешно отправлена';
+                    },
+                    error: function() {
+                        button.parentElement.reset();
+                        button.parentElement.lastElementChild.classList.remove('hide');
+                        button.parentElement.lastElementChild.classList.remove('success');
+                        button.parentElement.lastElementChild.classList.add('failure');
+                        button.parentElement.lastElementChild.innerHTML = 'Произошла ошибка';
+                    },
+                })
+            } else {
+                button.parentElement.lastElementChild.classList.remove('hide');
+                button.parentElement.lastElementChild.classList.remove('success');
+                button.parentElement.lastElementChild.classList.add('failure');
+                button.parentElement.lastElementChild.innerHTML = 'Заполните поля "Имя" и "Телефон"';
+            }
+        })
+    });
+}
+
 tarifList();
 modal('.card__button', '#form', '#modal__window');
 modal('.channels-tag', '#channels', '#modal__channels');
 tarifHashLoading();
 channelsList();
+form();
